@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-dark: #000;
+    --color-white: #fff;
+}
+
+.centralizar{
+    align-items: center;
+    display: flex;
+}
+
+header{
+    background-color: #484949;
+    justify-content: space-between;
+    height: 4em;
+    width: 100%
+}
+
+.container-local{
+    justify-content: center;
+}
+
+.container-local input{
+    border: none;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 400;
+    padding: 7px 2px;
+    outline: none;
+}
+
+.container-local i{
+    cursor: pointer;
+    font-size: 1.3em;
+    margin-left: 0.4em;
+}
+
+.container-horario span{
+    font-family: "Glory", sans-serif;
+    font-size: 1.4em;
+}
+
+.container-horario, .container-local{
+    margin: 0 8em;
+}
+
+main{
+    display: flex;
+}
+
+.main{
+    height: 89.6vh;
+    width: 75%;
+}
+
+.main-info{
+    z-index: 100;
+}
+
+.cidade-estado{
+    margin: 2% 0 0 2%;
+}
+
+.cidade-estado, .long-lat, .container-horario span, .info-metereologico h2, .info-metereologico li{
+    color: var(--color-white);
+}
+
+.info-complementar{
+    color: var(--color-dark);
+}
+
+.long-lat{
+    margin: 1% 0 0 2%;
+}
+
+.info-complementar{
+    justify-content: left;
+    margin: 31% 0 0 2%;
+}
+
+.temperatura{
+    font-size: 3em;
+}
+
+
+.info-data{
+    display: block;
+    margin-left: 3%;
+}
+
+.container-tempo{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 2%;
+}
+
+.container-tempo i{
+    font-size: 1.5em;
+    margin-bottom: 3px;
+}
+
+.data, .tempoD{
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+.infos{
+    align-items: center;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    height: 89.6vh;
+    width: 25%;
+}
+
+.cidades, .info-metereologico{
+    margin-left: 2em;
+}
+
+.barra{
+    background-color: var(--color-white);
+    height: 2px;
+    margin-left: 2em;
+    margin-top: 10%;
+    width: 83%;
+}
+
+.info-metereologico{
+    outline-offset: 4px;
+    margin-top: 10%;
+}
+
+.info-metereologico h2{
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.info-metereologico li{
+    font-size: 1em;
+    margin-top: 0.9em;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 480px) {
+    .container-horario, .container-local{
+        margin: 0 1em;
+    }
+
+    main{
+        flex-direction: column;
+    }
+
+    .main{
+        height: 72vh;
+        width: 100%;
+    }
+
+    .main-info h1{
+        font-size: 1.3em;
+    }
+
+    .long-lat{
+        font-size: 1em;
+    }
+
+    .info-complementar{
+        margin: 80% 0 0 2%;
+    }
+
+    .temperatura{
+        font-size: 2em;
+    }
+
+    .infos{
+        height: 53vh;
+        justify-content: start;
+        width: 100%;
+    }
+
+    .barra:nth-child(1){
+        display: none;
+    }
+}
